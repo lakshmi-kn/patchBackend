@@ -1,0 +1,14 @@
+
+services:
+  - type: web
+    name: patch-backend
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_HOST
+        value: 0.0.0.0
+    autoDeploy: true
